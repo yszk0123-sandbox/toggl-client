@@ -8,13 +8,14 @@
   "license": "MIT",
   "scripts": {
     "start": "node dist/index.js",
-    "build": "esbuild --bundle src/index.ts --outfile=dist/index.js --platform=node --minify",
-    "build:dev": "esbuild --bundle src/index.ts --outfile=dist/index.js --platform=node",
+    "build": "esbuild --bundle src/index.ts --outfile=dist/index.js --platform=node --define:process.env.NODE_ENV=\"'production'\" --minify",
+    "build:dev": "esbuild --bundle src/index.ts --outfile=dist/index.js --platform=node --define:process.env.NODE_ENV=\"'development'\"",
     "watch": "sane 'yarn build:dev' --glob='src/**/*.{ts,tsx}'",
     "test": "tsc --noEmit"
   },
   "devDependencies": {
     "@types/node": "^14.11.2",
+    "@types/node-fetch": "^2.5.7",
     "@types/react": "^16.9.49",
     "esbuild": "^0.7.6",
     "prettier": "^2.1.2",
@@ -23,8 +24,12 @@
   },
   "dependencies": {
     "ink": "^3.0.6",
+    "ink-multi-select": "git+https://github.com/leipert/ink-multi-select.git#leipert-ink-v3",
     "ink-select-input": "^4.1.0",
     "ink-text-input": "^4.0.1",
+    "jotai": "^0.7.1",
+    "js-base64": "^3.5.2",
+    "node-fetch": "^2.6.1",
     "react": "^16.13.1"
   }
 }
