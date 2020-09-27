@@ -2,7 +2,7 @@
  * @example
  * $ deno run --allow-env --allow-net deno/toggl.ts | pbcopy
  */
-import { TogglAPIClient } from '../api/ToggleAPIClient';
+import { TogglAPIClient } from '../api/TogglAPIClient';
 import { addDate } from '../api/DateUtils';
 import { rr } from './rr';
 

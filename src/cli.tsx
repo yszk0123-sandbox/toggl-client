@@ -3,7 +3,7 @@ import { render, Text, useFocus, Box } from 'ink';
 import SelectInput from 'ink-select-input';
 import TextInput from 'ink-text-input';
 import MultiSelect from 'ink-multi-select';
-import { TogglAPIClient } from './api/ToggleAPIClient';
+import { TogglAPIClient } from './api/TogglAPIClient';
 import { config } from './config';
 import { TogglTimeEntry } from './model/TogglTimeEntry';
 import { addDate } from './api/DateUtils';
